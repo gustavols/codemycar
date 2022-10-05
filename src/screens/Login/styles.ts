@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-    background-color: #FFFEFD;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
     height: 100%;
     width: 100%;
 `;
@@ -11,7 +11,7 @@ export const WomanSection = styled.View`
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #FF4B26;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
 `;
 
 export const LogoContainer = styled.View`
@@ -28,12 +28,11 @@ export const ViewTitleLogin = styled.View`
 `;
 
 export const TitleLogin = styled.Text`
-    font-family: 'Lexend';
+    font-family: 'Lexend-SemiBold';
     font-style: normal;
-    font-weight: 800;
     font-size: 32px;
     line-height: 40px;
-    color: #585666;
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     text-align: center;
 `;
 
@@ -51,37 +50,39 @@ export const ButtonLogin = styled.TouchableOpacity`
     align-items: center;
     width: 80%;
     height: 60px;
-    background: #FAFAFC;
-    border: 1px solid #E3E3E6;
+    background: ${({ theme }) => theme.COLORS.BUTTON_BACKGROUND};
+    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
     border-radius: 5px;
 `;
 
 
 export const ViewLoginGoogle = styled.View`
-    flex-basis: 25%;
+    flex-basis: 20%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #E9E9EB;
+    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
 `;
 
 export const ViewTextLogin = styled.View`
-    flex-basis: 75%;
+    flex-basis: 80%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
 `;
 
-
 export const TextButtonLogin = styled.Text`
-    font-family: 'Inter';
+    font-family: Lexend-Medium;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 18px;
-    color: #666666;
+    color: ${({ theme }) => theme.COLORS.BUTTON_COLOR_TEXT};
 `;
 
 
