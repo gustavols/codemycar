@@ -7,7 +7,7 @@ export const Container = styled.View`
 `;
 
 export const WomanSection = styled.View`
-    height: 40%;
+    height: 35%;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,7 @@ export const WomanSection = styled.View`
 `;
 
 export const LogoContainer = styled.View`
-    margin-top: 40%;
+    margin-top: 50%;
 `;
 
 export const ViewTitleLogin = styled.View`
@@ -34,13 +34,14 @@ export const TitleLogin = styled.Text`
     line-height: 40px;
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     text-align: center;
+    margin-top: 15%;
 `;
 
 export const ViewButtonLogin = styled.View`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6%;
+    margin-top: 10%;
 `;
 
 export const ButtonLogin = styled.TouchableOpacity`

@@ -8,17 +8,21 @@ import {
     LatestSearch,
     LatestSearchView,
     SearchCode,
+    ViewScroll,
+    ScrollCards,
 } from './styles';
 
 import Search from "../../assets/images/search.svg";
 
 import Header from '../../components/Header';
-import CardLatestSearch from '../../components/CardLatestSearch'
+import Cards from '../../components/Cards'
+
 
 export function Home() {
     return (
         <Container>
             <Header />
+            
             <SearchCode>
                 <ButtonSearchCode>
                     <ButtonSearchIcone>
@@ -29,10 +33,16 @@ export function Home() {
                     </ButtonSearchText>
                 </ButtonSearchCode>
             </SearchCode>
+            
             <LatestSearchView>
                 <LatestSearch>Últimas Buscas</LatestSearch>
-            </LatestSearchView> 
-            <CardLatestSearch />
+            </LatestSearchView>
+
+            <ViewScroll>
+                <ScrollCards>
+                    <Cards />
+                </ScrollCards>
+            </ViewScroll>    
         </Container>
     );
-}
+}   

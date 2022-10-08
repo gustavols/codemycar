@@ -10,7 +10,7 @@ import {
     TextButtonLogin,
     ViewTextLogin,
     ViewLoginGoogle
-    
+
 } from './styles';
 
 import Logo from "../../assets/images/WomanPhoto.svg";
@@ -35,7 +35,7 @@ export function Login() {
             <ViewButtonLogin>
                 <ButtonLogin>
                     <ViewLoginGoogle>
-                        <LoginGoogle width="32" height="32.49"/>
+                        <LoginGoogle width="32" height="32.49" />
                     </ViewLoginGoogle>
                     <ViewTextLogin>
                         <TextButtonLogin>Entrar com Google</TextButtonLogin>
@@ -43,5 +43,6 @@ export function Login() {
                 </ButtonLogin>
             </ViewButtonLogin>
         </Container>
+        
     );
 }

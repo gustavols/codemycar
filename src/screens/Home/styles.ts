@@ -1,21 +1,19 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
 
 export const SearchCode = styled.View`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
-
-
 export const ButtonSearchCode = styled.TouchableOpacity`
-  
     width: 336px;
     height: 54px;
-    background: #585666;
+    background: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 11px;
     display: flex;
     flex-direction: row;
@@ -41,12 +39,13 @@ export const SearchText = styled.Text`
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
-    color: #FFFFFF;
+    color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
 
 export const LatestSearchView = styled.View`
     display: flex;
     justify-content: flex-start;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
 
 export const LatestSearch = styled.Text`
@@ -56,9 +55,18 @@ export const LatestSearch = styled.Text`
     font-size: 20px;
     line-height: 25px;
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
-    margin-top: 31px;
+    margin-top: 20px;
     margin-left: 23px;
 `;
+
+export const ViewScroll = styled.SafeAreaView`
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
+`;
+
+export const ScrollCards = styled.ScrollView`
+
+`;
+
 
 
 
