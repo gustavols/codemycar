@@ -29,7 +29,7 @@ export function Home() {
                         <Search width="32" height="32"/>
                     </ButtonSearchIcone>
                     <ButtonSearchText>
-                        <SearchText>PROCURE PELO CÓDIGO</SearchText>
+                        <SearchText>PROCURAR ERRO</SearchText>
                     </ButtonSearchText>
                 </ButtonSearchCode>
             </SearchCode>
@@ -37,7 +37,6 @@ export function Home() {
             <LatestSearchView>
                 <LatestSearch>Últimas Buscas</LatestSearch>
             </LatestSearchView>
-
             <ViewScroll>
                 <ScrollCards>
                     <Cards />

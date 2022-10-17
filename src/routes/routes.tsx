@@ -5,7 +5,8 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const { Screen, Navigator } = createBottomTabNavigator();
 
 import { Home } from '../screens/Home';
-import { Login } from '../screens/Login';
+import { Perfil } from '../screens/Perfil';
+import { SearchError } from '../screens/SearchError';
 
 export default function TabRoutes() {
   return (
@@ -22,10 +23,10 @@ export default function TabRoutes() {
         name="Home"
         component={Home}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: '',
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5
-              name="truck-pickup"
+              name="home"
               color={color}
               size={size}
             />
@@ -33,13 +34,27 @@ export default function TabRoutes() {
         }}
       />
       <Screen
-        name="Login"
-        component={Login}
+        name="SearchError"
+        component={SearchError}
         options={{
-          tabBarLabel: 'Login',
+          tabBarLabel: '',
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5
-              name="angle-up"
+              name="home"
+              color={color}
+              size={size}
+            />
+          )
+        }}
+      />
+      <Screen
+        name="Perfil"
+        component={Perfil}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5
+              name="user"
               color={color}
               size={size}
             />

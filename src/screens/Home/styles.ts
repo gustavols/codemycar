@@ -23,15 +23,18 @@ export const ButtonSearchCode = styled.TouchableOpacity`
 `;
 
 export const ButtonSearchIcone = styled.View`
-    flex-basis: 20%;
+    flex-basis: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
 `;
 
 export const ButtonSearchText = styled.View`
-    flex-basis: 80%;
+    flex-basis: 90%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const SearchText = styled.Text`

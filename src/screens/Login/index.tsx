@@ -15,7 +15,6 @@ import {
 
 import Logo from "../../assets/images/WomanPhoto.svg";
 import LoginGoogle from "../../assets/images/LoginGoogle.svg";
-import { Button } from "react-native";
 
 export function Login() {
     return (
