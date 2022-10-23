@@ -36,10 +36,19 @@ export const Main = styled.View`
     align-items: center;
 `;
 
-export const PhotoUser = styled.Text`
+export const PhotoUser = styled.View`
     margin-top: 22px;
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
+
+export const Photo = styled.View`
+    background: #000;
+    width: 150px;
+    height: 150px;
+    border-radius: 1000px;
+`;
+
+
 
 export const NameUser = styled.Text`
     font-family: 'Lexend-SemiBold';
@@ -67,7 +76,7 @@ export const Footer = styled.View`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 25%;
+    padding-top: 15%;
 `;
 
 export const ViewButtonDesconnect = styled.View`

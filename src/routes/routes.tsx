@@ -1,22 +1,28 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
 const { Screen, Navigator } = createBottomTabNavigator();
 
 import { Home } from '../screens/Home';
 import { Perfil } from '../screens/Perfil';
-import { SearchError } from '../screens/SearchError';
+import { Login } from '../screens/Login';
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faHomeUser } from '@fortawesome/sharp-solid-svg-icons/faHomeUser'
+import { faUserCircle } from '@fortawesome/sharp-solid-svg-icons/faUserCircle'
+
 
 export default function TabRoutes() {
+
   return (
-    <Navigator initialRouteName='Home'
+    <Navigator initialRouteName="Login"
       screenOptions={{
         tabBarActiveTintColor: '#FF4B26',
         tabBarInactiveTintColor: '#FFFFFF',
         headerShown: false,
         tabBarActiveBackgroundColor: '#585666',
         tabBarInactiveBackgroundColor:'#585666',
+        
       }}
     >
       <Screen
@@ -25,39 +31,18 @@ export default function TabRoutes() {
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5
-              name="home"
-              color={color}
-              size={size}
-            />
+            <FontAwesomeIcon icon={ faHomeUser } size={25} color={ 'white' } />
           )
         }}
       />
-      <Screen
-        name="SearchError"
-        component={SearchError}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5
-              name="home"
-              color={color}
-              size={size}
-            />
-          )
-        }}
-      />
+
       <Screen
         name="Perfil"
         component={Perfil}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5
-              name="user"
-              color={color}
-              size={size}
-            />
+            <FontAwesomeIcon icon={ faUserCircle } size={25} color={ 'white' } />
           )
         }}
       />

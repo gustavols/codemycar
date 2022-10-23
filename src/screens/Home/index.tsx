@@ -17,8 +17,11 @@ import Search from "../../assets/images/search.svg";
 import Header from '../../components/Header';
 import Cards from '../../components/Cards'
 
-
 export function Home() {
+
+   
+
+
     return (
         <Container>
             <Header />
@@ -29,7 +32,11 @@ export function Home() {
                         <Search width="32" height="32"/>
                     </ButtonSearchIcone>
                     <ButtonSearchText>
-                        <SearchText>PROCURAR ERRO</SearchText>
+                        <SearchText
+                        
+                        
+                        
+                        >PROCURAR ERRO</SearchText>
                     </ButtonSearchText>
                 </ButtonSearchCode>
             </SearchCode>
@@ -45,3 +52,7 @@ export function Home() {
         </Container>
     );
 }   
+
+function navigate(arg0: string) {
+    throw new Error("Function not implemented.");
+}

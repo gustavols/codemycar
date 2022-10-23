@@ -11,8 +11,11 @@ export default function App(){
   return (
       <ThemeProvider theme={light}>
         <NavigationContainer>
-          <TabRoutes />
+          {
+            <TabRoutes />
+          }
         </NavigationContainer>  
       </ThemeProvider>    
   );
 }
+

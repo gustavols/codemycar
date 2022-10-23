@@ -6,16 +6,25 @@ export const Container = styled.View`
     height: 100%;
 `;
 
-export const ViewSearchError = styled.View`
+export const Main = styled.View`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px; 
 `;
 
-export const ListErrors = styled.View`
-    
-`; 
+export const SectionSearchError = styled.View`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+`;
+
+export const ViewSearchError = styled.View`
+    flex-basis: 90%;
+`;
 
 export const InputSearchError = styled.TextInput.attrs({
     placeholderTextColor: "#ffffff"
@@ -27,8 +36,27 @@ export const InputSearchError = styled.TextInput.attrs({
     border-radius: 5px;
     text-align: center;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 17px;
 `;
+
+
+export const ViewFilterSearch = styled.View`
+    flex-basis: 10%;
+`;
+
+export const FilterSearch = styled.TouchableOpacity`
+    
+`;
+
+export const SectionErrorFound = styled.View`
+    width: 92%;
+`;
+
+
+
+
+
+
 
 
 

@@ -13,7 +13,8 @@ import {
     ButtonDesconnect,
     ViewIconDesconnect,
     ViewTextDesconnect,
-    TextButtonDesconnect
+    TextButtonDesconnect,
+    Photo
 } from './styles';
 
 import Desconnect from "../../assets/images/Desconnect.svg";
@@ -32,7 +33,7 @@ export function Perfil() {
             </Header>
             <Main>
                 <PhotoUser>
-                    <LoginGoogle width="100" height="100"/>
+                    <Photo></Photo>
                 </PhotoUser>
                 <NameUser>
                     Gustavo Santos

@@ -11,7 +11,7 @@ export const SearchCode = styled.View`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
 export const ButtonSearchCode = styled.TouchableOpacity`
-    width: 336px;
+    width: 90%;
     height: 54px;
     background: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 11px;
@@ -23,25 +23,25 @@ export const ButtonSearchCode = styled.TouchableOpacity`
 `;
 
 export const ButtonSearchIcone = styled.View`
-    flex-basis: 10%;
+    flex-basis: 19%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
 `;
 
 export const ButtonSearchText = styled.View`
-    flex-basis: 90%;
-    margin: 0 auto;
+    flex-basis: 81%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    
 `;
 
 export const SearchText = styled.Text`
     font-family: 'Lexend-SemiBold';
     font-weight: 600;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 26px;
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
 
