@@ -7,7 +7,7 @@ export const Container = styled.View`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
 
-export const Card = styled.View`
+export const Card = styled.TouchableOpacity`
     width: 90%;
     height: 100px;
     background: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};

@@ -27,7 +27,7 @@ export const ViewSearchError = styled.View`
 `;
 
 export const InputSearchError = styled.TextInput.attrs({
-    placeholderTextColor: "#ffffff"
+    placeholderTextColor: "rgba(255, 255, 255, 0.5)"
   })`
     width: 90%;
     height: 50px;

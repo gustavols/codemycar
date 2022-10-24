@@ -16,7 +16,8 @@ import {
 import Logo from "../../assets/images/WomanPhoto.svg";
 import LoginGoogle from "../../assets/images/LoginGoogle.svg";
 
-export function Login() {
+
+export function Login({navigation}) {
     return (
         <Container>
             <WomanSection>
@@ -32,7 +33,8 @@ export function Login() {
             </ViewTitleLogin>
 
             <ViewButtonLogin>
-                <ButtonLogin>
+                <ButtonLogin
+                onPress={() => navigation.navigate("Main")} >
                     <ViewLoginGoogle>
                         <LoginGoogle width="32" height="32.49" />
                     </ViewLoginGoogle>

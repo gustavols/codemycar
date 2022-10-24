@@ -5,12 +5,11 @@ const { Screen, Navigator } = createBottomTabNavigator();
 import { Home } from '../screens/Home';
 import { Perfil } from '../screens/Perfil';
 import { Login } from '../screens/Login';
-
+import { ErrorDetails } from '../screens/ErrorDetails';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faHomeUser } from '@fortawesome/sharp-solid-svg-icons/faHomeUser'
 import { faUserCircle } from '@fortawesome/sharp-solid-svg-icons/faUserCircle'
-
 
 export default function TabRoutes() {
 
@@ -36,6 +35,16 @@ export default function TabRoutes() {
         }}
       />
 
+      <Screen
+              name="ErrorDetails"
+              component={ErrorDetails}
+              options={{
+                tabBarLabel: '',
+                tabBarIcon: ({ color, size }) => (
+                  <FontAwesomeIcon icon={ faHomeUser } size={25} color={ 'white' } />
+                )
+              }}
+      />
       <Screen
         name="Perfil"
         component={Perfil}
