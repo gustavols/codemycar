@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Container,
     Main,
@@ -14,9 +14,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
 
 
+
 import Header from '../../components/Header';
 
 import CardsErrorsFound from '../../components/CardsErrorsFound';
+
+
 
 export function SearchError() {
     return (
