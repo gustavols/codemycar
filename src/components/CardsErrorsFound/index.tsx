@@ -11,30 +11,33 @@ import {
     Brand,
 } from './styles';
 
-import api from '../../services/api' 
-import { URI } from '../../services/uri';
+import firebase from "../../config/firebaseconfig";
 
 export default function CardsErrorsFound() {
-    const [errors, setErrors] = useState([]);
-
-    useEffect(() => {
-        async function loadErrors() {
-            const response = await api.get(URI.ERROR);
-            setErrors(response.data);
-        } 
-        loadErrors();            
-    }, []);
+    const [items, setItems] = useState([]);
     
+    useEffect(() => {
+        firebase.collection("Errors").onSnapshot((query) => {
+        const list = [];
+        query.forEach((doc) => {
+            list.push({ ...doc.data(), id: doc.id });
+        });
+            setItems(list);
+        });  
+    }, []);
+
     return (
-        <Container>
-            {errors.map((error: any) => (
-                <Card>
+        <Container
+            data={ items }
+            renderItem={( { item } )=>{
+                return(
+                    <Card>
                     <ViewErrorCode>
                         <TitleErrorCode>
                             Código do Erro
                         </TitleErrorCode>
                         <ErrorCode>
-                            {error.code_error}
+                            {item.code}
                         </ErrorCode>
                     </ViewErrorCode>
                     <ViewBrand>
@@ -42,11 +45,12 @@ export default function CardsErrorsFound() {
                             Marca:
                         </TitleBrand>
                         <Brand>
-                            {error.brand_car}
+                            {item.brand}
                         </Brand>
                     </ViewBrand>
-                </Card> 
-            ))}    
+                </Card>
+                )
+            }}>
         </Container>
     );
 }
