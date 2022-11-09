@@ -50,21 +50,21 @@ export const Photo = styled.View`
 
 
 
-export const NameUser = styled.Text`
+export const EmailUser = styled.Text`
     font-family: 'Lexend-SemiBold';
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 18px;
     line-height: 40px;
     margin-top: 20px;
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
 
-export const EmailUser = styled.Text`
+export const IdUser = styled.Text`
     font-family: 'Lexend-Regular';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     margin-top: 2px;
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};

@@ -2,12 +2,19 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
+`;
+
+export const ViewFormLogin = styled.View`
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const WomanSection = styled.View`
-    height: 35%;
+    height: 40%;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -15,75 +22,83 @@ export const WomanSection = styled.View`
 `;
 
 export const LogoContainer = styled.View`
-    margin-top: 50%;
+    margin-top: 40%;
 `;
 
-export const ViewTitleLogin = styled.View`
+export const ViewForm = styled.View`
+    padding-top: 20%;
+    height: 60%;
+    width: 100%;
     display: flex;
-    margin: 0 auto;
-    max-width: 250px;
-    text-align: center;
-    margin-top: 35%;
-   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
-export const TitleLogin = styled.Text`
+export const InputEmail = styled.TextInput.attrs({
+    placeholderTextColor: "rgba(255, 255, 255, 1)"
+  })`
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    background: #585666;
+    border-radius: 2px;
+    color: white;
     font-family: 'Lexend-SemiBold';
-    font-style: normal;
-    font-size: 32px;
-    line-height: 40px;
-    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+`;
+
+export const InputPassword = styled.TextInput.attrs({
+    placeholderTextColor: "rgba(255, 255, 255, 1)"
+  })`
+    margin-top: 2%;
+    width: 70%;
+    height: 40px;
     text-align: center;
-    margin-top: 15%;
+    background: #585666;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Lexend-SemiBold';
 `;
 
-export const ViewButtonLogin = styled.View`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
+export const LoginMail = styled.TouchableOpacity`
+    margin-top: 2%;
+    width: 70%;
+    height: 40px;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    border-radius: 2px;
 `;
 
-export const ButtonLogin = styled.TouchableOpacity`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 60px;
-    background: ${({ theme }) => theme.COLORS.BUTTON_BACKGROUND};
-    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
-    border-radius: 5px;
+export const LoginMailText = styled.Text`
+    text-align: center;
+    color: white;
+    font-family: 'Lexend-SemiBold';
+    font-size: 16px;
+    line-height: 40px;
 `;
 
-
-export const ViewLoginGoogle = styled.View`
-    flex-basis: 20%;
-    height: 100%;
+export const CadastrarArea = styled.View`
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
+    gap: 5px;
 `;
 
-export const ViewTextLogin = styled.View`
-    flex-basis: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
+
+export const CadastrarText = styled.Text`
+    text-align: center;
+    color: #585666;
+    font-family: 'Lexend-Regular';
+    margin-top: 15px;
+    font-size: 16px;
 `;
 
-export const TextButtonLogin = styled.Text`
-    font-family: Lexend-Medium;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: ${({ theme }) => theme.COLORS.BUTTON_COLOR_TEXT};
+export const CadastrarTextSpan = styled.Text`
+    text-align: center;
+    color: #585666;
+    font-family: 'Lexend-Bold';
+    margin-top: 15px;
+    font-size: 16px;
 `;
 
 

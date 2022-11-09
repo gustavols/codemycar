@@ -11,13 +11,14 @@ import {
     Brand,
 } from './styles';
 
-import firebase from "../../config/firebaseconfig";
+import firebase from "../../config/firebase";
 
 export default function CardsErrorsFound() {
     const [items, setItems] = useState([]);
+    const databse = firebase.firestore()
     
     useEffect(() => {
-        firebase.collection("Errors").onSnapshot((query) => {
+        databse.collection("Errors").onSnapshot((query) => {
         const list = [];
         query.forEach((doc) => {
             list.push({ ...doc.data(), id: doc.id });

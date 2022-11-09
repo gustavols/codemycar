@@ -5,6 +5,9 @@ export type propsNavigationStack = {
     Login: undefined
     Main: undefined
     SearchError: undefined
+    Register: undefined
+    Home: undefined
+    Perfil: undefined
 }
 
 export type BottomTabParamList = {

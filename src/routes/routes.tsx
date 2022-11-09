@@ -34,17 +34,6 @@ export default function TabRoutes() {
           )
         }}
       />
-
-      <Screen
-              name="ErrorDetails"
-              component={ErrorDetails}
-              options={{
-                tabBarLabel: '',
-                tabBarIcon: ({ color, size }) => (
-                  <FontAwesomeIcon icon={ faHomeUser } size={25} color={ 'white' } />
-                )
-              }}
-      />
       <Screen
         name="Perfil"
         component={Perfil}

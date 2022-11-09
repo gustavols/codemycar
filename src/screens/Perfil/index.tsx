@@ -6,7 +6,7 @@ import {
     SubTitlePerfil,
     Main,
     PhotoUser,
-    NameUser,
+    IdUser,
     EmailUser,
     Footer,
     ViewButtonDesconnect,
@@ -18,9 +18,23 @@ import {
 } from './styles';
 
 import Desconnect from "../../assets/images/Desconnect.svg";
-import LoginGoogle from "../../assets/images/LoginGoogle.svg";
 
-export function Perfil() {
+import firebase from "../../config/firebase";
+
+export function Perfil({navigation}) {
+
+    const userData = firebase.auth().currentUser;
+    if (userData !== null) {
+    }
+
+    function logout(){
+        firebase.auth().signOut().then(()=>{
+          navigation.navigate("Login")
+        }).catch((error)=>{
+          
+        });
+    }
+        
     return (
         <Container>
             <Header>
@@ -28,19 +42,19 @@ export function Perfil() {
                     Perfil    
                 </TitlePerfil>
                 <SubTitlePerfil>
-                    Dados da sua conta google.  
+                    Dados da sua conta.  
                 </SubTitlePerfil>
             </Header>
             <Main>
                 <PhotoUser>
                     <Photo></Photo>
                 </PhotoUser>
-                <NameUser>
-                    Gustavo Santos
-                </NameUser>
                 <EmailUser>
-                    gustavoleandro616@gmail.com
-                </EmailUser>    
+                    {userData.email}
+                </EmailUser>  
+                <IdUser>
+                    {userData.uid}
+                </IdUser>    
             </Main>
             <Footer>
                 <ViewButtonDesconnect>
@@ -49,7 +63,9 @@ export function Perfil() {
                             <Desconnect width="32" height="32" />
                         </ViewIconDesconnect>
                         <ViewTextDesconnect>
-                            <TextButtonDesconnect>DESCONECTAR</TextButtonDesconnect>
+                            <TextButtonDesconnect
+                                onPress={() => {logout()}}
+                            >DESCONECTAR</TextButtonDesconnect>
                         </ViewTextDesconnect>
                     </ButtonDesconnect>
                 </ViewButtonDesconnect>
@@ -57,4 +73,9 @@ export function Perfil() {
         </Container>
     );
 }   
+
+
+function getAuth() {
+    throw new Error("Function not implemented.");
+}
 

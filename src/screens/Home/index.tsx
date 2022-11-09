@@ -24,20 +24,23 @@ export function Home({navigation}) {
             
             <SearchCode >
                 <ButtonSearchCode
-                    onPress={() => navigation.navigate("SearchError")}
+                    onPress={() => navigation.navigate("Perfil")}
                 >
                     <ButtonSearchIcone>
                         <Search width="32" height="32"/>
                     </ButtonSearchIcone>
                     <ButtonSearchText>
                         <SearchText
+                        
                         >PROCURAR ERRO</SearchText>
                     </ButtonSearchText>
                 </ButtonSearchCode>
             </SearchCode>
             
             <LatestSearchView>
-                <LatestSearch>Últimas Buscas</LatestSearch>
+                <LatestSearch
+                
+                >Últimas Buscas</LatestSearch>
             </LatestSearchView>
             <ViewScroll>
                 <ScrollCards>
