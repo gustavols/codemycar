@@ -45,30 +45,7 @@ export const SearchText = styled.Text`
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
 
-export const LatestSearchView = styled.View`
-    display: flex;
-    justify-content: flex-start;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
-`;
 
-export const LatestSearch = styled.Text`
-    font-family: 'Lexend-SemiBold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
-    margin-top: 20px;
-    margin-left: 23px;
-`;
-
-export const ViewScroll = styled.SafeAreaView`
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
-`;
-
-export const ScrollCards = styled.ScrollView`
-
-`;
 
 
 

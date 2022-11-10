@@ -14,46 +14,66 @@ import {
     ViewIconDesconnect,
     ViewTextDesconnect,
     TextButtonDesconnect,
-    Photo
+    Photo,
+    HeaderInfo,
+    HeaderButtonComeBack,
+    ButtonComeBack
 } from './styles';
 
 import Desconnect from "../../assets/images/Desconnect.svg";
 
 import firebase from "../../config/firebase";
+import { getAuth, signOut } from "firebase/auth";
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faArrowLeft } from '@fortawesome/sharp-solid-svg-icons/faArrowLeft'
 
 export function Perfil({navigation}) {
 
-    const userData = firebase.auth().currentUser;
-    if (userData !== null) {
+    // TRAZER DADOS DO USUÁRIO
+    const auth = getAuth();
+    const user = auth.currentUser;
+    if (user !== null) {
+    const email = user.email;
+    const uid = user.uid;
     }
 
+    // DESLOGAR DA CONTA
     function logout(){
-        firebase.auth().signOut().then(()=>{
-          navigation.navigate("Login")
-        }).catch((error)=>{
-          
+        const auth = getAuth();
+        signOut(auth).then(() => {
+        // Sign-out successful.
+        }).catch((error) => {
+        // An error happened.
         });
     }
         
     return (
         <Container>
             <Header>
-                <TitlePerfil>
-                    Perfil    
-                </TitlePerfil>
-                <SubTitlePerfil>
-                    Dados da sua conta.  
-                </SubTitlePerfil>
+                <HeaderInfo>
+                    <TitlePerfil>
+                        Perfil    
+                    </TitlePerfil>
+                    <SubTitlePerfil>
+                        Dados da sua conta.  
+                    </SubTitlePerfil>
+                </HeaderInfo>
+                <HeaderButtonComeBack > 
+                    <ButtonComeBack onPress={() => navigation.navigate("Home")}>
+                        <FontAwesomeIcon icon={ faArrowLeft } size={30} color={'white'}   />
+                    </ButtonComeBack>
+                </HeaderButtonComeBack>
             </Header>
             <Main>
                 <PhotoUser>
                     <Photo></Photo>
                 </PhotoUser>
                 <EmailUser>
-                    {userData.email}
+                    {user.email}
                 </EmailUser>  
                 <IdUser>
-                    {userData.uid}
+                    ID: {user.uid}
                 </IdUser>    
             </Main>
             <Footer>
@@ -74,8 +94,4 @@ export function Perfil({navigation}) {
     );
 }   
 
-
-function getAuth() {
-    throw new Error("Function not implemented.");
-}
 

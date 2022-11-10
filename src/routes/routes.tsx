@@ -1,11 +1,10 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
 import { Home } from '../screens/Home';
 import { Perfil } from '../screens/Perfil';
-import { Login } from '../screens/Login';
-import { ErrorDetails } from '../screens/ErrorDetails';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faHomeUser } from '@fortawesome/sharp-solid-svg-icons/faHomeUser'
@@ -21,7 +20,6 @@ export default function TabRoutes() {
         headerShown: false,
         tabBarActiveBackgroundColor: '#585666',
         tabBarInactiveBackgroundColor:'#585666',
-        
       }}
     >
       <Screen

@@ -8,7 +8,24 @@ export const Container = styled.View`
 
 export const Header = styled.View`
     padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 `;
+
+export const HeaderInfo = styled.View`
+    flex-basis: 80%;
+`;
+
+export const HeaderButtonComeBack = styled.View`
+    flex-basis: 20%;
+`;
+
+export const ButtonComeBack = styled.TouchableOpacity`
+
+`;
+
+
 
 export const TitlePerfil = styled.Text`
     font-family: 'Lexend-SemiBold';
@@ -66,7 +83,6 @@ export const IdUser = styled.Text`
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
-    margin-top: 2px;
     color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 `;
 
@@ -126,3 +142,5 @@ export const ViewTextDesconnect = styled.View`
     align-items: center;
     border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_BORDER};
 `;
+
+

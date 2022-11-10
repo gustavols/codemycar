@@ -12,26 +12,24 @@ import {
     TitleCadastrar
 } from './styles';
 
-import firebase from '../../config/firebase'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export function Register({navigation})  {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [errorRegister, setErrorRegister] = useState("");
 
     const handleRegister = () =>{
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-
-        let user = userCredential.user;
-        navigation.navigate("Home" , { idUser: user.uid });
-        
-    
+            // Signed in 
+            const user = userCredential.user;
+            navigation.navigate("Home");
         })
         .catch((error) => {
-        setErrorRegister(true)
-        let errorCode = error.code;
-        let errorMessage = error.message;
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
         });
     };
 
@@ -59,7 +57,6 @@ export function Register({navigation})  {
                         CADASTRAR-ME
                     </LoginMailText>
                 </LoginMail>
-
                 <CadastrarArea>
                     <CadastrarText>
                         já tenho uma conta!

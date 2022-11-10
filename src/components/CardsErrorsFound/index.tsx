@@ -11,47 +11,36 @@ import {
     Brand,
 } from './styles';
 
-import firebase from "../../config/firebase";
+import { collection, getDocs } from "firebase/firestore"; 
+import db from "../../config/firebase";
 
-export default function CardsErrorsFound() {
-    const [items, setItems] = useState([]);
-    const databse = firebase.firestore()
+export default async function CardsErrorsFound() { 
+    const querySnapshot = await getDocs(collection(db, "car"));
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
+    });
     
-    useEffect(() => {
-        databse.collection("Errors").onSnapshot((query) => {
-        const list = [];
-        query.forEach((doc) => {
-            list.push({ ...doc.data(), id: doc.id });
-        });
-            setItems(list);
-        });  
-    }, []);
-
     return (
-        <Container
-            data={ items }
-            renderItem={( { item } )=>{
-                return(
+        <Container>
                     <Card>
-                    <ViewErrorCode>
-                        <TitleErrorCode>
-                            Código do Erro
-                        </TitleErrorCode>
-                        <ErrorCode>
-                            {item.code}
-                        </ErrorCode>
-                    </ViewErrorCode>
-                    <ViewBrand>
-                        <TitleBrand>
-                            Marca:
-                        </TitleBrand>
-                        <Brand>
-                            {item.brand}
-                        </Brand>
-                    </ViewBrand>
-                </Card>
-                )
-            }}>
+                        <ViewErrorCode>
+                            <TitleErrorCode>
+                                Código do Erro
+                            </TitleErrorCode>
+                            <ErrorCode>
+                                001
+                            </ErrorCode>
+                        </ViewErrorCode>
+                        <ViewBrand>
+                            <TitleBrand>
+                                Marca:
+                            </TitleBrand>
+                            <Brand>
+                                GM
+                            </Brand>
+                        </ViewBrand>
+                    </Card>
         </Container>
     );
 }

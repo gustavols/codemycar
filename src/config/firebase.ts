@@ -1,7 +1,9 @@
-import  firebase from "firebase";
-import 'firebase/storage';
- 
-var firebaseConfig = {
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
+
+const firebaseConfig = {
   apiKey: "AIzaSyAodiehbz9z-gWo8k1MXrLYx22i6qwq3Uk",
   authDomain: "codemycar-4e69a.firebaseapp.com",
   projectId: "codemycar-4e69a",
@@ -12,6 +14,11 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-export default firebase
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
+
+export default db;
+

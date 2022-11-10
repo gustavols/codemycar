@@ -13,19 +13,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
 
-
-
 import Header from '../../components/Header';
-
 import CardsErrorsFound from '../../components/CardsErrorsFound';
-
-
 
 export function SearchError() {
     return (
         <Container>
             <Header />
-            
             <Main>
                 <SectionSearchError>
                     <ViewSearchError>
@@ -39,12 +33,10 @@ export function SearchError() {
                         </FilterSearch>
                     </ViewFilterSearch>
                 </SectionSearchError>
-
                 <SectionErrorFound>
                     <CardsErrorsFound />
                 </SectionErrorFound>
-            </Main>
-          
+            </Main>     
         </Container>
     );
 }   

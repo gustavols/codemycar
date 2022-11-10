@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
     Container,
@@ -14,7 +14,12 @@ import {
 
 import Header from '../../components/Header';
 
-export function ErrorDetails() {
+import firebase from "../../config/firebase.js";
+
+export function ErrorDetails({navigation, route}) {
+    const idTask = route.params.id
+    const database = firebase.firestore()
+
     return (
         <Container>
             <Header />

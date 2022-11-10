@@ -16,26 +16,26 @@ import {
 
 import Logo from "../../assets/images/WomanPhoto.svg";
 
-import firebase from "../../config/firebase";
-import { faSquareTerminal } from "@fortawesome/sharp-solid-svg-icons";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export function Login({navigation}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [errorLogin, setErrorLogin] = useState("");
 
-    const handleLoginFirebase = () => {
-        firebase.auth().signInWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            let user = userCredential.user;
-            navigation.navigate("Home" , { idUser: user.uid });
-          })
-          .catch((error) => {
-            setErrorLogin(true)
-            let errorCode = error.code;
-            let errorMessage = error.message;
-          });
-        }   
+    // FUNÇÃO DE LOGIN DO USUÁRIO
+    const handleLogin = () =>{
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            navigation.navigate("Home");
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+    }   
 
     return (
         <Container>
@@ -59,7 +59,7 @@ export function Login({navigation}) {
                     />    
                     <LoginMail>
                         <LoginMailText
-                            onPress={handleLoginFirebase}
+                            onPress={handleLogin}
                         >
                             ENTRAR
                         </LoginMailText>
