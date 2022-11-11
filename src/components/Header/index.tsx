@@ -6,17 +6,10 @@ import {
     SubtitleHeader
 } from './styles';
 
-import UserPhoto from "../../assets/images/LoginGoogle.svg";
-
-
-import firebase from "../../config/firebase";
-
 export default function Header() {
-
-
     return (
         <Container>
-            <ContentHeader  >
+            <ContentHeader>
                 <TitleHeader>Olá</TitleHeader>
                 <SubtitleHeader>Bem vindo ao MyCodeCar</SubtitleHeader>
             </ContentHeader>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mycodecar.app-mergeDebugResources-27:/values-v23/values-v23.xml",
+            "outputFile": "com.mycodecar.app-mergeDebugResources-31:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/home/gustavols/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/res/values-v23/values-v23.xml",

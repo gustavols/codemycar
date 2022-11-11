@@ -17,6 +17,8 @@
     "@fortawesome/react-native-fontawesome": "^0.3.0",
     "@fortawesome/sharp-solid-svg-icons": "^6.2.0",
     "@react-native-async-storage/async-storage": "^1.17.10",
+    "@react-native-firebase/app": "^16.4.3",
+    "@react-native-firebase/firestore": "^16.4.3",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/material-bottom-tabs": "^6.2.4",
     "@react-navigation/native": "^6.0.13",

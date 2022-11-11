@@ -7,14 +7,20 @@ import {
     InputSearchError,
     ViewFilterSearch,
     FilterSearch,
-    SectionErrorFound
+    SectionErrorFound,
+    Card,
+    ViewErrorCode,
+    TitleErrorCode,
+    ErrorCode,
+    ViewBrand,
+    TitleBrand,
+    Brand,
 } from './styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
 
 import Header from '../../components/Header';
-import CardsErrorsFound from '../../components/CardsErrorsFound';
 
 export function SearchError() {
     return (
@@ -33,9 +39,26 @@ export function SearchError() {
                         </FilterSearch>
                     </ViewFilterSearch>
                 </SectionSearchError>
-                <SectionErrorFound>
-                    <CardsErrorsFound />
-                </SectionErrorFound>
+                    <SectionErrorFound>
+                            <Card>
+                                <ViewErrorCode>
+                                    <TitleErrorCode>
+                                        Código do Erro
+                                    </TitleErrorCode>
+                                    <ErrorCode >
+                                        Opa
+                                    </ErrorCode>
+                                </ViewErrorCode>
+                                <ViewBrand>
+                                    <TitleBrand>
+                                        Marca:
+                                    </TitleBrand>
+                                    <Brand>
+                                        Opa
+                                    </Brand>
+                                </ViewBrand>
+                            </Card>
+                    </SectionErrorFound>
             </Main>     
         </Container>
     );

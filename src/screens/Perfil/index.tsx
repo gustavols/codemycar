@@ -42,12 +42,13 @@ export function Perfil({navigation}) {
     function logout(){
         const auth = getAuth();
         signOut(auth).then(() => {
-        // Sign-out successful.
+            navigation.navigate("Login");
         }).catch((error) => {
-        // An error happened.
+        
         });
     }
-        
+     
+    
     return (
         <Container>
             <Header>
