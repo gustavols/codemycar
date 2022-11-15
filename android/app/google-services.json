@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583815071779",
+    "project_id": "codemycar-4e69a",
+    "storage_bucket": "codemycar-4e69a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583815071779:android:4773f1b5086dfa9af40996",
+        "android_client_info": {
+          "package_name": "com.mycodecar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583815071779-ct4m3j1fvf2nfc3mu7h5r2494a14mrro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJjmujkNo_NEFLnP0xpZU08Flc8wzAGxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583815071779-ct4m3j1fvf2nfc3mu7h5r2494a14mrro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

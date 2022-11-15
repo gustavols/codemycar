@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">583815071779-ct4m3j1fvf2nfc3mu7h5r2494a14mrro.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">583815071779</string>
+    <string name="google_api_key" translatable="false">AIzaSyCJjmujkNo_NEFLnP0xpZU08Flc8wzAGxs</string>
+    <string name="google_app_id" translatable="false">1:583815071779:android:4773f1b5086dfa9af40996</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCJjmujkNo_NEFLnP0xpZU08Flc8wzAGxs</string>
+    <string name="google_storage_bucket" translatable="false">codemycar-4e69a.appspot.com</string>
+    <string name="project_id" translatable="false">codemycar-4e69a</string>
+</resources>

@@ -19,7 +19,7 @@ export function Home({navigation}) {
             <Header />
             <SearchCode >
                 <ButtonSearchCode
-                    onPress={() => navigation.navigate("SearchError")}
+                    onPress={() => navigation.navigate("CreateError")}
                 >
                     <ButtonSearchIcone>
                         <Search width="32" height="32"/>

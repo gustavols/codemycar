@@ -8,10 +8,12 @@ export type propsNavigationStack = {
     Register: undefined
     Home: undefined
     Perfil: undefined
+    CreateError: undefined
 }
 
 export type BottomTabParamList = {
     Home: undefined;
+    CreateError: undefined;
     Perfil: undefined;
   };
  

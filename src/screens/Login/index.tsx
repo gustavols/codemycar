@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import { useState } from 'react';
+import { Alert } from 'react-native';
+import auth from '@react-native-firebase/auth';
+
 import {
     Container,
     WomanSection,
@@ -15,29 +18,46 @@ import {
 } from './styles';
 
 import Logo from "../../assets/images/WomanPhoto.svg";
+import React from 'react';
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
 
 export function Login({navigation}) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    // FUNÇÃO DE LOGIN DO USUÁRIO
-    const handleLogin = () =>{
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            navigation.navigate("Home");
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        });
-    }   
+    function handleSignIn() {
+        if (!email || !password) {
+          return Alert.alert('Entrar', 'Informe e-mail e senha.');
+        }
+    
+        setIsLoading(true);
+    
+        auth()
+          .signInWithEmailAndPassword(email, password)
+          .catch((error) => {
+            console.log(error);
+            setIsLoading(false);
+    
+            if (error.code === 'auth/invalid-email') {
+              return Alert.alert('Entrar', 'E-mail inválido.');
+            }
+    
+            if (error.code === 'auth/wrong-password') {
+              return Alert.alert('Entrar', 'E-mail ou senha inválida.');
+            }
+    
+            if (error.code === 'auth/user-not-found') {
+              return Alert.alert('Entrar', 'E-mail ou senha inválida.');
+            }
+    
+            return Alert.alert('Entrar', 'Não foi possível acessar');
+          });
+      }
+   
 
-    return (
+    return(
         <Container>
             <ViewFormLogin>
                 <WomanSection>
@@ -47,19 +67,17 @@ export function Login({navigation}) {
                 </WomanSection>
                 <ViewForm>
                     <InputEmail 
-                        placeholder="DIGITE O EMAIL"
-                        value={email}
-                        onChangeText={(text) => setEmail(text)}
+                        placeholder="E-mail"
+                        onChangeText={setEmail}
                     />
                     <InputPassword 
-                        placeholder="DIGITE A SENHA"
-                        value={password}
-                        onChangeText={(text) => setPassword(text)}
+                        placeholder="Senha"
                         secureTextEntry={true}
+                        onChangeText={setPassword}
                     />    
                     <LoginMail>
                         <LoginMailText
-                            onPress={handleLogin}
+                           onPress={handleSignIn}
                         >
                             ENTRAR
                         </LoginMailText>

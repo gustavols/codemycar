@@ -14,11 +14,7 @@ import {
 
 import Header from '../../components/Header';
 
-import firebase from "../../config/firebase.js";
-
-export function ErrorDetails({navigation, route}) {
-    const idTask = route.params.id
-    const database = firebase.firestore()
+export function ErrorDetails({navigation}) {
 
     return (
         <Container>

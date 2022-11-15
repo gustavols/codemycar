@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import {
     Container,
     Main,
@@ -16,11 +17,10 @@ import {
     TitleBrand,
     Brand,
 } from './styles';
+import Header from '../../components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
-
-import Header from '../../components/Header';
 
 export function SearchError() {
     return (
@@ -46,7 +46,7 @@ export function SearchError() {
                                         Código do Erro
                                     </TitleErrorCode>
                                     <ErrorCode >
-                                        Opa
+                                        11
                                     </ErrorCode>
                                 </ViewErrorCode>
                                 <ViewBrand>
@@ -54,7 +54,7 @@ export function SearchError() {
                                         Marca:
                                     </TitleBrand>
                                     <Brand>
-                                        Opa
+                                        11
                                     </Brand>
                                 </ViewBrand>
                             </Card>
