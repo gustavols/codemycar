@@ -44,4 +44,5 @@ com.mycodecar.app-packaged_res-42 /home/gustavols/Área de Trabalho/codemycar/no
 com.mycodecar.app-packaged_res-43 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
 com.mycodecar.app-packaged_res-44 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
 com.mycodecar.app-packaged_res-45 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-svg/android/build/intermediates/packaged_res/debug
-com.mycodecar.app-packaged_res-46 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug
+com.mycodecar.app-packaged_res-46 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-touch-id/android/build/intermediates/packaged_res/debug
+com.mycodecar.app-packaged_res-47 /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug

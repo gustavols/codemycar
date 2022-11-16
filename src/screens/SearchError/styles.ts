@@ -22,7 +22,7 @@ export const SectionSearchError = styled.View`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     padding: 20px;
 `;
 

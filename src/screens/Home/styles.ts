@@ -38,10 +38,5 @@ export const TitlePage = styled.Text`
     color: #585666;
     font-family: 'Lexend-Bold';
     font-size: 22px;
-    padding-left: 10px;
+    padding-left: 15px;
 `;
-
-
-
-
-
