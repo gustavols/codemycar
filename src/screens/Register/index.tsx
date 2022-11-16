@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
+import { Alert } from 'react-native';
+import auth from '@react-native-firebase/auth';
+
 import {
     Container,
     ViewFormLogin,
@@ -12,26 +16,36 @@ import {
     TitleCadastrar
 } from './styles';
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
 export function Register({navigation})  {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    const handleRegister = () =>{
-        const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            navigation.navigate("Home");
+    function handleNewAccount() {
+        setIsLoading(true)
+
+
+        auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => Alert.alert("Conta", "Cadastrada com sucesso!"), navigation.navigate("Home"))
+        .catch(error => {
+            if (error.code === 'auth/email-already-in-use') {
+                Alert.alert('Esse endereço de email já esta em uso!');
+            }
+    
+            if (error.code === 'auth/invalid-email') {
+                Alert.alert('Esse endereço de e-mail é inválido!');
+            }
+    
+            if (error.code === 'auth/wrong-password') {
+                Alert.alert('Email ou Senha estão incorretos');
+            }
+    
+            console.error(error);
         })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-        });
-    };
+        .finally(() => setIsLoading(false));
+
+    }
 
     return (
         <Container>
@@ -41,18 +55,16 @@ export function Register({navigation})  {
             <ViewFormLogin>
                 <InputEmail 
                     placeholder="DIGITE O EMAIL"
-                    value={email}
-                    onChangeText={(text) => setEmail(text)}
+                    onChangeText={setEmail}
                 />
                 <InputPassword 
                     placeholder="DIGITE A SENHA"
                     secureTextEntry={true}
-                    value={password}
-                    onChangeText={(text) => setPassword(text)}
+                    onChangeText={setPassword}
                 />    
                 <LoginMail>
                     <LoginMailText
-                        onPress={handleRegister}
+                        onPress={handleNewAccount}
                     >
                         CADASTRAR-ME
                     </LoginMailText>

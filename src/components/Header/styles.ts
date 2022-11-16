@@ -4,34 +4,63 @@ export const Container = styled.View`
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
 `;
 
-export const ContentHeader = styled.View`
-    padding: 8% 0%;
+export const HeaderSection = styled.View`
     width: 100%;
-    padding-left: 10%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+`;
+
+export const LogoutHeader = styled.TouchableOpacity`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 20%;
+
+`;
+
+export const LogoutBackground = styled.TouchableOpacity`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68%;
+    height: 62%;
+    background: #FFAC4A;
+    border-radius: 5px;
+`;
+
+
+
+export const ContentHeader = styled.View`
+    padding-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 80%;
 `;
 
 export const TitleHeader = styled.Text`
-    font-family: 'Lexend-Medium';
+    font-family: 'Lexend-Bold';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 26px;
     line-height: 25px;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
+    color: #FFAC4A;
 `;
 
 export const SubtitleHeader = styled.Text`
     font-family: 'Lexend-Medium';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
-    color: ${({ theme }) => theme.COLORS.BUTTON_BACKGROUND};
+    color: #FFAC4A;
 `;
 
 
-
+    
 
 

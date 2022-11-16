@@ -1,4 +1,6 @@
 import React from "react";
+import auth, { firebase } from '@react-native-firebase/auth';
+
 import {
     Container,
     Header,
@@ -20,32 +22,19 @@ import {
     ButtonComeBack
 } from './styles';
 
-import Desconnect from "../../assets/images/Desconnect.svg";
-
-import firebase from "../../config/firebase";
-import { getAuth, signOut } from "firebase/auth";
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faArrowLeft } from '@fortawesome/sharp-solid-svg-icons/faArrowLeft'
+import { faUserAstronaut } from '@fortawesome/sharp-solid-svg-icons/faUserAstronaut'
+import { faRightFromBracket } from '@fortawesome/sharp-solid-svg-icons/faRightFromBracket'
 
 export function Perfil({navigation}) {
-
-    // TRAZER DADOS DO USUÁRIO
-    const auth = getAuth();
-    const user = auth.currentUser;
-    if (user !== null) {
-    const email = user.email;
-    const uid = user.uid;
-    }
-
+    const user = firebase.auth().currentUser;
     // DESLOGAR DA CONTA
     function logout(){
-        const auth = getAuth();
-        signOut(auth).then(() => {
-            navigation.navigate("Login");
-        }).catch((error) => {
-        
-        });
+        auth()
+        .signOut()
+        .then(() => navigation.navigate("Login"));
     }
      
     
@@ -68,20 +57,20 @@ export function Perfil({navigation}) {
             </Header>
             <Main>
                 <PhotoUser>
-                    <Photo></Photo>
+                    <FontAwesomeIcon icon={ faUserAstronaut } size={100} color={'white'}   />
                 </PhotoUser>
                 <EmailUser>
                     {user.email}
                 </EmailUser>  
                 <IdUser>
-                    ID: {user.uid}
+                    {user.uid}
                 </IdUser>    
             </Main>
             <Footer>
                 <ViewButtonDesconnect>
                     <ButtonDesconnect>
                         <ViewIconDesconnect>
-                            <Desconnect width="32" height="32" />
+                        <FontAwesomeIcon icon={ faRightFromBracket } size={32} color={'#FFAC4A'}   />
                         </ViewIconDesconnect>
                         <ViewTextDesconnect>
                             <TextButtonDesconnect

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    background: #FFAC4A;
     width: 100%;
     height: 100%;
 `;
@@ -46,7 +46,7 @@ export const SubTitlePerfil = styled.Text`
 `;
 
 export const Main = styled.View`
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};  
+    background: #FFAC4A;  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +87,7 @@ export const IdUser = styled.Text`
 `;
 
 export const Footer = styled.View`
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    background: #FFAC4A;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
@@ -18,8 +19,6 @@ import {
 } from './styles';
 
 import Logo from "../../assets/images/WomanPhoto.svg";
-import React from 'react';
-
 
 
 export function Login({navigation}) {
@@ -27,36 +26,30 @@ export function Login({navigation}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSignIn() {
-        if (!email || !password) {
-          return Alert.alert('Entrar', 'Informe e-mail e senha.');
-        }
-    
-        setIsLoading(true);
-    
+    function handleSignIn(){
         auth()
-          .signInWithEmailAndPassword(email, password)
-          .catch((error) => {
-            console.log(error);
-            setIsLoading(false);
-    
-            if (error.code === 'auth/invalid-email') {
-              return Alert.alert('Entrar', 'E-mail inválido.');
-            }
-    
-            if (error.code === 'auth/wrong-password') {
-              return Alert.alert('Entrar', 'E-mail ou senha inválida.');
-            }
-    
-            if (error.code === 'auth/user-not-found') {
-              return Alert.alert('Entrar', 'E-mail ou senha inválida.');
-            }
-    
-            return Alert.alert('Entrar', 'Não foi possível acessar');
-          });
-      }
-   
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+            navigation.navigate("Home")
+        })
+        .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+            Alert.alert('Esse endereço de email já esta em uso!');
+        }
 
+        if (error.code === 'auth/invalid-email') {
+            Alert.alert('Esse endereço de e-mail é inválido!');
+        }
+
+        if (error.code === 'auth/wrong-password') {
+            Alert.alert('Email ou Senha estão incorretos');
+        }
+
+        
+        console.error(error);
+        });
+    }
+        
     return(
         <Container>
             <ViewFormLogin>
@@ -67,11 +60,11 @@ export function Login({navigation}) {
                 </WomanSection>
                 <ViewForm>
                     <InputEmail 
-                        placeholder="E-mail"
+                        placeholder="DIGITE SEU EMAIL"
                         onChangeText={setEmail}
                     />
                     <InputPassword 
-                        placeholder="Senha"
+                        placeholder="DIGITE SUA SENHA"
                         secureTextEntry={true}
                         onChangeText={setPassword}
                     />    

@@ -1,35 +1,53 @@
 import React from "react";
 import {
     Container,
-    ButtonSearchCode,
-    ButtonSearchIcone,
-    ButtonSearchText,
-    SearchText,
-    SearchCode,
-
+    Cards,
+    CardOptions,
+    TitleCard,
+    TitlePage
 } from './styles';
 
-import Search from "../../assets/images/search.svg";
-
 import Header from '../../components/Header';
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faSearch } from '@fortawesome/sharp-solid-svg-icons/faSearch'
+import { faAdd } from '@fortawesome/sharp-solid-svg-icons/faAdd'
+import { faUser } from '@fortawesome/sharp-solid-svg-icons/faUser'
 
 export function Home({navigation}) {
     return (
         <Container>
-            <Header />
-            <SearchCode >
-                <ButtonSearchCode
-                    onPress={() => navigation.navigate("CreateError")}
-                >
-                    <ButtonSearchIcone>
-                        <Search width="32" height="32"/>
-                    </ButtonSearchIcone>
-                    <ButtonSearchText>
-                        <SearchText
-                        >PROCURAR ERRO</SearchText>
-                    </ButtonSearchText>
-                </ButtonSearchCode>
-            </SearchCode>
+            <Header navigation={undefined} />
+            <TitlePage>
+                Realiza algumas ações:
+            </TitlePage>
+            <Cards>
+                <CardOptions onPress={() => navigation.navigate("SearchError")} >
+                    <TitleCard>
+                        <FontAwesomeIcon icon={ faSearch } size={25} color={'white'}   />
+                    </TitleCard>
+                </CardOptions>
+
+                <CardOptions onPress={() => navigation.navigate("CreateError")} >
+                    <TitleCard>
+                        <FontAwesomeIcon icon={ faAdd } size={25} color={'white'}   />
+                    </TitleCard>
+                </CardOptions>
+
+                <CardOptions onPress={() => navigation.navigate("Home")} >
+                    <TitleCard>
+                        
+                    </TitleCard>
+                </CardOptions>
+
+                <CardOptions onPress={() => navigation.navigate("Perfil")} >
+                    <TitleCard>
+                        <FontAwesomeIcon icon={ faUser } size={25} color={'white'}   />
+                    </TitleCard>
+                </CardOptions>
+
+                
+            </Cards>
         </Container>
     );
 }   
