@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { Alert } from 'react-native';
+
 import auth from '@react-native-firebase/auth';
+
+import TouchId from 'react-native-touch-id';
 
 import {
     Container,
@@ -15,13 +18,28 @@ import {
     CadastrarArea,
     CadastrarText,
     CadastrarTextSpan,
-    ViewForm
+    ViewForm,
+    LoginTouch,
+    LoginTouchText,
+    SectionButtonLogin
 } from './styles';
 
 import Logo from "../../assets/images/WomanPhoto.svg";
 
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faFingerprint } from '@fortawesome/sharp-solid-svg-icons/faFingerprint'
+
 
 export function Login({navigation}) {
+
+    function handleSignInTouch(){
+        TouchId.authenticate().then(() =>{
+            navigation.navigate("Home")
+        }).catch(() => {
+            Alert.alert('Autenticação falhou. Por favor, entre com email e senha');
+        })
+    }
+
     const [isLoading, setIsLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -67,14 +85,24 @@ export function Login({navigation}) {
                         placeholder="DIGITE SUA SENHA"
                         secureTextEntry={true}
                         onChangeText={setPassword}
-                    />    
-                    <LoginMail>
-                        <LoginMailText
-                           onPress={handleSignIn}
-                        >
-                            ENTRAR
-                        </LoginMailText>
-                    </LoginMail>
+                    /> 
+
+                    <SectionButtonLogin>
+                        <LoginMail>
+                            <LoginMailText
+                            onPress={handleSignIn}
+                            >
+                                ENTRAR
+                            </LoginMailText>
+                        </LoginMail>
+
+                        <LoginTouch>
+                            <LoginTouchText onPress={handleSignInTouch} >
+                                <FontAwesomeIcon icon={ faFingerprint } size={28} color={'white'} />
+                            </LoginTouchText>
+                        </LoginTouch>
+
+                    </SectionButtonLogin>
 
                     <CadastrarArea>
                         <CadastrarText>

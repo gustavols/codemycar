@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
+import { Alert } from "react-native";
+
 import firestore from '@react-native-firebase/firestore'
 
 import {
@@ -27,12 +29,14 @@ import {
     TitleSolution,
     DataSolution,
     CardList,
-    Hr
+    Hr,
+    Delete
 } from './styles';
 import Header from '../../components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
+import { faTrash } from '@fortawesome/sharp-solid-svg-icons/faTrash'
 import { QuerySnapshot } from "firebase/firestore";
 
 import { OrderProps } from '../../components/Controllers/Order/index'
@@ -49,6 +53,8 @@ import Nissan from '../../assets/images/nissan.svg'
 import Subaru from '../../assets/images/subaru.svg'
 import Toyota from '../../assets/images/toyota.svg'
 import Volkswagen from '../../assets/images/volkswagen.svg'
+import { IdUser } from "../Perfil/styles";
+
 
 export function SearchError() {
     const [isLoading, setIsLoading] = useState(false);
@@ -76,6 +82,16 @@ export function SearchError() {
     }, []);
 
     
+    function deleteError(){
+        firestore()
+        .collection('errors')
+        .doc('id do documento')
+        .delete()
+        .then(() => {
+            Alert.alert('Erro excluido com sucesso!');
+        });
+    } 
+
     return (
         <Container>
             <Header navigation={undefined} />
@@ -178,6 +194,9 @@ export function SearchError() {
                                         {data.solution}
                                     </DataSolution>
                                 </Solution>
+                                <Delete onPress={deleteError} >
+                                    <FontAwesomeIcon icon={ faTrash } size={25} color={ '#ffffff' } />
+                                </Delete>
                             </ContentCard>
                         </Card>
                     ))}

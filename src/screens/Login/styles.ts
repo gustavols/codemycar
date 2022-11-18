@@ -18,7 +18,7 @@ export const WomanSection = styled.View`
     width: 100%;
     align-items: center;
     justify-content: center;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    background: #FFAC4A;
 `;
 
 export const LogoContainer = styled.View`
@@ -61,11 +61,14 @@ export const InputPassword = styled.TextInput.attrs({
 `;
 
 export const LoginMail = styled.TouchableOpacity`
+    width: 80%;
     margin-top: 2%;
-    width: 70%;
-    height: 40px;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    height: 42px;
+    background: #FFAC4A;
     border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const LoginMailText = styled.Text`
@@ -73,7 +76,6 @@ export const LoginMailText = styled.Text`
     color: white;
     font-family: 'Lexend-SemiBold';
     font-size: 16px;
-    line-height: 40px;
 `;
 
 export const CadastrarArea = styled.View`
@@ -101,4 +103,32 @@ export const CadastrarTextSpan = styled.Text`
     font-size: 16px;
 `;
 
+
+export const LoginTouch = styled.TouchableOpacity`
+    margin-top: 2%;
+    width: 18%;
+    height: 42px;
+    background: #FFAC4A;
+    border-radius: 2px;
+`;
+
+export const LoginTouchText = styled.Text`
+    text-align: center;
+    color: white;
+    font-family: 'Lexend-SemiBold';
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const SectionButtonLogin = styled.View`
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+`;
 

@@ -47,7 +47,7 @@ export const LoginMail = styled.TouchableOpacity`
     margin-top: 2%;
     width: 70%;
     height: 40px;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_ORANGE};
+    background: #FFAC4A;
     border-radius: 2px;
 `;
 

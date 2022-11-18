@@ -11,6 +11,7 @@ export const Header = styled.View`
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 20%;
 `;
 
 export const HeaderInfo = styled.View`
@@ -24,8 +25,6 @@ export const HeaderButtonComeBack = styled.View`
 export const ButtonComeBack = styled.TouchableOpacity`
 
 `;
-
-
 
 export const TitlePerfil = styled.Text`
     font-family: 'Lexend-SemiBold';
@@ -51,6 +50,7 @@ export const Main = styled.View`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 50%;
 `;
 
 export const PhotoUser = styled.View`
@@ -87,12 +87,12 @@ export const IdUser = styled.Text`
 `;
 
 export const Footer = styled.View`
+    height: 20%;
     background: #FFAC4A;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 15%;
 `;
 
 export const ViewButtonDesconnect = styled.View`

@@ -30,15 +30,18 @@ export function Register({navigation})  {
         .then(() => Alert.alert("Conta", "Cadastrada com sucesso!"), navigation.navigate("Home"))
         .catch(error => {
             if (error.code === 'auth/email-already-in-use') {
-                Alert.alert('Esse endereço de email já esta em uso!');
+                Alert.alert('Esse endereço de email já esta em uso!'); 
+                navigation.navigate("Login")
             }
     
             if (error.code === 'auth/invalid-email') {
                 Alert.alert('Esse endereço de e-mail é inválido!');
+                navigation.navigate("Register")
             }
     
             if (error.code === 'auth/wrong-password') {
                 Alert.alert('Email ou Senha estão incorretos');
+                navigation.navigate("Register")
             }
     
             console.error(error);

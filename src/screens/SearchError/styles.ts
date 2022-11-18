@@ -215,3 +215,13 @@ export const Hr = styled.View`
 `;
 
 
+export const Delete = styled.TouchableOpacity`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FF2F2F;
+    height: 40px;
+`;
+
+

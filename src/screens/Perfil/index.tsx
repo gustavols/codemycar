@@ -30,14 +30,20 @@ import { faRightFromBracket } from '@fortawesome/sharp-solid-svg-icons/faRightFr
 
 export function Perfil({navigation}) {
     const user = firebase.auth().currentUser;
+
+
+    const emailUser = user.email
+    const idUser = user.uid
+
     // DESLOGAR DA CONTA
     function logout(){
         auth()
         .signOut()
         .then(() => navigation.navigate("Login"));
     }
-     
+
     
+
     return (
         <Container>
             <Header>
@@ -60,10 +66,23 @@ export function Perfil({navigation}) {
                     <FontAwesomeIcon icon={ faUserAstronaut } size={100} color={'white'}   />
                 </PhotoUser>
                 <EmailUser>
-                    {user.email}
+                    {emailUser == '' &&
+                        'Usuario Anonimo'
+                    }
+
+                    {emailUser != '' &&
+                        emailUser
+                    }
+
                 </EmailUser>  
                 <IdUser>
-                    {user.uid}
+                    {idUser == '' &&
+                        'Id: 000000000000000000'
+                    }
+
+                    {idUser != '' &&
+                        idUser
+                    }
                 </IdUser>    
             </Main>
             <Footer>

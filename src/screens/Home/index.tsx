@@ -19,7 +19,7 @@ export function Home({navigation}) {
         <Container>
             <Header navigation={undefined} />
             <TitlePage>
-                Realiza algumas ações:
+                Realize algumas ações:
             </TitlePage>
             <Cards>
                 <CardOptions onPress={() => navigation.navigate("SearchError")} >
