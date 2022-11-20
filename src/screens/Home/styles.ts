@@ -19,7 +19,7 @@ export const Cards = styled.View`
 export const CardOptions = styled.TouchableOpacity`
     background: ${({ theme }) => theme.COLORS.BUTTON_COLOR_TEXT};
     margin: 15px 0px;
-    width: 18%;
+    width: 30%;
     height: 50px;
     display: flex;
     justify-content: center;

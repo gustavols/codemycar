@@ -33,20 +33,11 @@ export function Home({navigation}) {
                         <FontAwesomeIcon icon={ faAdd } size={25} color={'white'}   />
                     </TitleCard>
                 </CardOptions>
-
-                <CardOptions onPress={() => navigation.navigate("Home")} >
-                    <TitleCard>
-                        
-                    </TitleCard>
-                </CardOptions>
-
                 <CardOptions onPress={() => navigation.navigate("Perfil")} >
                     <TitleCard>
                         <FontAwesomeIcon icon={ faUser } size={25} color={'white'}   />
                     </TitleCard>
                 </CardOptions>
-
-                
             </Cards>
         </Container>
     );

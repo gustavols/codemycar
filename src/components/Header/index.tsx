@@ -16,6 +16,7 @@ import { faArrowRightFromBracket } from '@fortawesome/sharp-solid-svg-icons/faAr
 
 export default function Header({navigation}) {     
     const user = firebase.auth().currentUser;
+
     return (
         <Container>
             <HeaderSection>
@@ -27,10 +28,8 @@ export default function Header({navigation}) {
                     <LogoutBackground>
                         <FontAwesomeIcon icon={ faArrowRightFromBracket } size={30} color={'white'} />
                     </LogoutBackground>
-                    
                 </LogoutHeader>
             </HeaderSection>
-           
         </Container>
     );
 }

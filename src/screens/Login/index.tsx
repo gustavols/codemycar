@@ -8,8 +8,6 @@ import TouchId from 'react-native-touch-id';
 
 import {
     Container,
-    WomanSection,
-    LogoContainer,
     ViewFormLogin,
     InputEmail,
     InputPassword,
@@ -19,27 +17,13 @@ import {
     CadastrarText,
     CadastrarTextSpan,
     ViewForm,
-    LoginTouch,
-    LoginTouchText,
-    SectionButtonLogin
+    SectionButtonLogin,
+    TitleCadastrar
 } from './styles';
 
 import Logo from "../../assets/images/WomanPhoto.svg";
 
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faFingerprint } from '@fortawesome/sharp-solid-svg-icons/faFingerprint'
-
-
 export function Login({navigation}) {
-
-    function handleSignInTouch(){
-        TouchId.authenticate().then(() =>{
-            navigation.navigate("Home")
-        }).catch(() => {
-            Alert.alert('Autenticação falhou. Por favor, entre com email e senha');
-        })
-    }
-
     const [isLoading, setIsLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -63,6 +47,11 @@ export function Login({navigation}) {
             Alert.alert('Email ou Senha estão incorretos');
         }
 
+        if (error.code === 'auth/user-not-found') {
+            Alert.alert('Não há registro de usuário, crie uma conta primeiro!');
+            navigation.navigate("Register")
+        }
+
         
         console.error(error);
         });
@@ -70,12 +59,10 @@ export function Login({navigation}) {
         
     return(
         <Container>
+            <TitleCadastrar>
+                REALIZE SEU LOGIN
+            </TitleCadastrar>
             <ViewFormLogin>
-                <WomanSection>
-                    <LogoContainer>
-                        <Logo width="350" height="350" />
-                    </LogoContainer>
-                </WomanSection>
                 <ViewForm>
                     <InputEmail 
                         placeholder="DIGITE SEU EMAIL"
@@ -95,13 +82,6 @@ export function Login({navigation}) {
                                 ENTRAR
                             </LoginMailText>
                         </LoginMail>
-
-                        <LoginTouch>
-                            <LoginTouchText onPress={handleSignInTouch} >
-                                <FontAwesomeIcon icon={ faFingerprint } size={28} color={'white'} />
-                            </LoginTouchText>
-                        </LoginTouch>
-
                     </SectionButtonLogin>
 
                     <CadastrarArea>
@@ -117,8 +97,6 @@ export function Login({navigation}) {
                 </ViewForm>
             </ViewFormLogin>
         </Container>
-        
-
-
+    
     );
 }

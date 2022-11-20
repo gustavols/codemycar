@@ -17,41 +17,6 @@ export const Main = styled.View`
     align-items: center;
 `;
 
-export const SectionSearchError = styled.View`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-`;
-
-export const ViewSearchError = styled.View`
-    flex-basis: 90%;
-`;
-
-export const InputSearchError = styled.TextInput.attrs({
-    placeholderTextColor: "rgba(255, 255, 255, 0.5)"
-  })`
-    width: 95%;
-    height: 50px;
-    background: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
-    font-family: "Lexend-SemiBold";
-    border-radius: 5px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 17px;
-`;
-
-
-export const ViewFilterSearch = styled.View`
-    flex-basis: 10%;
-`;
-
-export const FilterSearch = styled.TouchableOpacity`
-    
-`;
-
 export const SectionErrorFound = styled.View`
     width: 100%;
 `;
@@ -124,11 +89,11 @@ export const ContentCard = styled.View`
 
 export const Model = styled.View`
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     background: #585666;
-    height: 50px;
+    height: 100px;
     padding-right: 10px;
 `;
 
@@ -147,7 +112,7 @@ export const DataModel = styled.Text`
     line-height: 28px;
     font-family: "Lexend-Light";
     color: white; 
-    padding-left: 10px;
+    padding-left: 24px;
 `;
     
 export const Found = styled.View`
@@ -215,13 +180,30 @@ export const Hr = styled.View`
 `;
 
 
-export const Delete = styled.TouchableOpacity`
+export const Delete = styled.View`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 45px;
+`;
+
+export const DeleteArea = styled.TouchableOpacity`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
     background: #FF2F2F;
-    height: 40px;
+`;
+
+export const EditArea = styled.TouchableOpacity`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #3BCE63;
 `;
 
 

@@ -9,9 +9,9 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] /home/gustavols/.gradle/cache
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /home/gustavols/.gradle/caches/transforms-3/ae0c35edff7aab3199726067e4d40486/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/gustavols/.gradle/caches/transforms-3/0309eaa86938eb5ff5694657217d7d3a/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-vector-icons] /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-async-storage_async-storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-firebase_firestore] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/firestore/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-firebase_app] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-32:12
 MERGED from [:react-native-picker_picker] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-picker/picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -53,6 +53,7 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/gustavols
 MERGED from [androidx.core:core-ktx:1.5.0] /home/gustavols/.gradle/caches/transforms-3/8f2808cb9f01e8fdc77f8dc992bb3b6d/transformed/jetified-core-ktx-1.5.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.sqlite:sqlite:2.1.0] /home/gustavols/.gradle/caches/transforms-3/3982020e17e1812eda7af6dc5971699f/transformed/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/gustavols/.gradle/caches/transforms-3/122ec87db4e11ef56756ee2635c04aa1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/gustavols/.gradle/caches/transforms-3/c48d98febf784df98d7d2fe04a6507b7/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/gustavols/.gradle/caches/transforms-3/938eb6e5916d738dc4637cd8ae8d7231/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
@@ -120,10 +121,14 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] /home/gustavols/.gradle/cache
 MERGED from [com.facebook.flipper:flipper:0.125.0] /home/gustavols/.gradle/caches/transforms-3/4579d77217e00b3eb1409e4f5131b607/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:15:5-67
 MERGED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gradle/caches/transforms-3/809183521b75a3f6d78619465edf07fd/transformed/jetified-firebase-firestore-24.4.0/AndroidManifest.xml:13:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gradle/caches/transforms-3/809183521b75a3f6d78619465edf07fd/transformed/jetified-firebase-firestore-24.4.0/AndroidManifest.xml:13:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:26:5-67
 	android:name
 		ADDED from /home/gustavols/Área de Trabalho/codemycar/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.USE_FINGERPRINT
@@ -150,6 +155,8 @@ MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/c
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/gustavols/.gradle/caches/transforms-3/938eb6e5916d738dc4637cd8ae8d7231/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/gustavols/.gradle/caches/transforms-3/938eb6e5916d738dc4637cd8ae8d7231/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] /home/gustavols/.gradle/caches/transforms-3/518e9668641163f476d67ad3a63bab57/transformed/jetified-firebase-appcheck-interop-16.1.0/AndroidManifest.xml:23:5-20
@@ -236,12 +243,12 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/gustavols
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /home/gustavols/.gradle/caches/transforms-3/0309eaa86938eb5ff5694657217d7d3a/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-vector-icons] /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /home/gustavols/Área de Trabalho/codemycar/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-async-storage_async-storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_firestore] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/firestore/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_firestore] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/firestore/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_app] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-firebase_app] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-picker_picker] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-picker/picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -324,6 +331,8 @@ MERGED from [androidx.sqlite:sqlite:2.1.0] /home/gustavols/.gradle/caches/transf
 MERGED from [androidx.sqlite:sqlite:2.1.0] /home/gustavols/.gradle/caches/transforms-3/3982020e17e1812eda7af6dc5971699f/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/gustavols/.gradle/caches/transforms-3/122ec87db4e11ef56756ee2635c04aa1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/gustavols/.gradle/caches/transforms-3/122ec87db4e11ef56756ee2635c04aa1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/gustavols/.gradle/caches/transforms-3/c48d98febf784df98d7d2fe04a6507b7/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
@@ -430,16 +439,22 @@ ADDED from [com.facebook.flipper:flipper:0.125.0] /home/gustavols/.gradle/caches
 		ADDED from [com.facebook.flipper:flipper:0.125.0] /home/gustavols/.gradle/caches/transforms-3/4579d77217e00b3eb1409e4f5131b607/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
 	android:name
 		ADDED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:react-native-firebase_storage] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gradle/caches/transforms-3/809183521b75a3f6d78619465edf07fd/transformed/jetified-firebase-firestore-24.4.0/AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gradle/caches/transforms-3/809183521b75a3f6d78619465edf07fd/transformed/jetified-firebase-firestore-24.4.0/AndroidManifest.xml:12:5-79
 MERGED from [io.grpc:grpc-android:1.48.1] /home/gustavols/.gradle/caches/transforms-3/986e53f8428f1b1f49578b9a13be9d1d/transformed/jetified-grpc-android-1.48.1/AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.48.1] /home/gustavols/.gradle/caches/transforms-3/986e53f8428f1b1f49578b9a13be9d1d/transformed/jetified-grpc-android-1.48.1/AndroidManifest.xml:9:5-79
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:25:5-79
 	android:name
 		ADDED from [:react-native-firebase_auth] /home/gustavols/Área de Trabalho/codemycar/node_modules/@react-native-firebase/auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
 meta-data#app_data_collection_default_enabled
@@ -454,6 +469,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gra
 MERGED from [com.google.firebase:firebase-firestore:24.4.0] /home/gustavols/.gradle/caches/transforms-3/809183521b75a3f6d78619465edf07fd/transformed/jetified-firebase-firestore-24.4.0/AndroidManifest.xml:16:9-22:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] /home/gustavols/.gradle/caches/transforms-3/0a4e9d23b78f4c59fce61403d3dc608e/transformed/jetified-firebase-auth-21.1.0/AndroidManifest.xml:64:9-70:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/gustavols/.gradle/caches/transforms-3/e53c305f1ae64109ecbf31c6f80e3e9d/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:32:9-36:35
 MERGED from [com.google.firebase:firebase-common:20.2.0] /home/gustavols/.gradle/caches/transforms-3/e53c305f1ae64109ecbf31c6f80e3e9d/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:32:9-36:35
 	android:exported
@@ -560,6 +577,12 @@ ADDED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.g
 		ADDED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:20.3.0] /home/gustavols/.gradle/caches/transforms-3/750928b5e5c17b1e3fffc3d09843a966/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/gustavols/.gradle/caches/transforms-3/cd7cc9f141812e7a5bd49e58bb4ef7c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:33:17-107
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] /home/gustavols/.gradle/caches/transforms-3/43a47f35034419d56527adc8180d3679/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 	android:exported

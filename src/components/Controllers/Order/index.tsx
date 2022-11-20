@@ -1,4 +1,5 @@
 export type OrderProps = OrderStyleProps & {
+    id: string;
     brand: string;
     code: number;
     found: string;

@@ -2,32 +2,33 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     background: ${({ theme }) => theme.COLORS.BACKGROUND_WHITE};
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 `;
 
+export const TitleCadastrar = styled.Text`
+    max-width: 300px;
+    text-align: center;
+    color: #585666;
+    font-family: 'Lexend-Bold';
+    margin-top: 15px;
+    font-size: 36px;
+    cursor: pointer;
+`;
+
+
 export const ViewFormLogin = styled.View`
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`;
-
-export const WomanSection = styled.View`
-    height: 40%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background: #FFAC4A;
-`;
-
-export const LogoContainer = styled.View`
-    margin-top: 40%;
+    margin-top: 20px;
 `;
 
 export const ViewForm = styled.View`
-    padding-top: 20%;
-    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,7 +62,7 @@ export const InputPassword = styled.TextInput.attrs({
 `;
 
 export const LoginMail = styled.TouchableOpacity`
-    width: 80%;
+    width: 100%;
     margin-top: 2%;
     height: 42px;
     background: #FFAC4A;
@@ -101,27 +102,6 @@ export const CadastrarTextSpan = styled.Text`
     font-family: 'Lexend-Bold';
     margin-top: 15px;
     font-size: 16px;
-`;
-
-
-export const LoginTouch = styled.TouchableOpacity`
-    margin-top: 2%;
-    width: 18%;
-    height: 42px;
-    background: #FFAC4A;
-    border-radius: 2px;
-`;
-
-export const LoginTouchText = styled.Text`
-    text-align: center;
-    color: white;
-    font-family: 'Lexend-SemiBold';
-    font-size: 16px;
-    line-height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 `;
 
 export const SectionButtonLogin = styled.View`

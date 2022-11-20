@@ -63,8 +63,6 @@ export function CreateError({navigation}) {
                                     { label: 'Toyota', value: 'Toyota' },
                                     { label: 'Volkswagen', value: 'Volkswagen' },
                                 ]}
-                                
-
                             />
 
                         

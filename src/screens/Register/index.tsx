@@ -27,7 +27,7 @@ export function Register({navigation})  {
 
         auth()
         .createUserWithEmailAndPassword(email, password)
-        .then(() => Alert.alert("Conta", "Cadastrada com sucesso!"), navigation.navigate("Home"))
+        .then(() => console.log("Conta", "Cadastrada com sucesso!"), navigation.navigate("Home"))
         .catch(error => {
             if (error.code === 'auth/email-already-in-use') {
                 Alert.alert('Esse endereço de email já esta em uso!'); 

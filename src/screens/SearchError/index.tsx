@@ -6,12 +6,6 @@ import firestore from '@react-native-firebase/firestore'
 import {
     Container,
     Main,
-    SectionSearchError,
-    ViewSearchError,
-    InputSearchError,
-    ViewFilterSearch,
-    FilterSearch,
-    SectionErrorFound,
     Card,
     HeaderCard,
     Code,
@@ -30,17 +24,18 @@ import {
     DataSolution,
     CardList,
     Hr,
-    Delete
+    Delete,
+    DeleteArea,
+    EditArea
 } from './styles';
 import Header from '../../components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
 import { faTrash } from '@fortawesome/sharp-solid-svg-icons/faTrash'
-import { QuerySnapshot } from "firebase/firestore";
+import { faPenToSquare } from '@fortawesome/sharp-solid-svg-icons/faPenToSquare'
 
 import { OrderProps } from '../../components/Controllers/Order/index'
-
 
 import Bmw from '../../assets/images/bmw.svg'
 import Chevrolet from '../../assets/images/chevrolet.svg'
@@ -53,13 +48,20 @@ import Nissan from '../../assets/images/nissan.svg'
 import Subaru from '../../assets/images/subaru.svg'
 import Toyota from '../../assets/images/toyota.svg'
 import Volkswagen from '../../assets/images/volkswagen.svg'
-import { IdUser } from "../Perfil/styles";
 
 
-export function SearchError() {
+export function SearchError({navigation}) {
     const [isLoading, setIsLoading] = useState(false);
     const [orders, setOrders] = useState<OrderProps[]>([]);
 
+    type ErrorProps = {
+        id: string;
+        brand: string;
+        code: number;
+        found: string;
+        model: string;
+        solution: string;
+    };
 
     useEffect(() => {
 
@@ -81,33 +83,21 @@ export function SearchError() {
         return () => subscribe();
     }, []);
 
-    
-    function deleteError(){
+
+    function deleteError(id) {
         firestore()
-        .collection('errors')
-        .doc('id do documento')
-        .delete()
-        .then(() => {
-            Alert.alert('Erro excluido com sucesso!');
-        });
-    } 
+            .collection('errors')
+            .doc(id)
+            .delete()
+            .then(() => {
+                Alert.alert('Erro excluido com sucesso!');
+            });
+    }
 
     return (
         <Container>
             <Header navigation={undefined} />
             <Main>
-                <SectionSearchError>
-                                <ViewSearchError>
-                                    <InputSearchError
-                                        placeholder="PROCURE PELO MODELO"
-                                    />
-                                </ViewSearchError>
-                                <ViewFilterSearch>
-                                    <FilterSearch>
-                                        <FontAwesomeIcon icon={ faFilterList } size={35} color={ '#585666' } />
-                                    </FilterSearch>
-                                </ViewFilterSearch>
-                </SectionSearchError> 
                 <CardList>
                     {orders.map((data: any) => (
                         <Card key={data.id} >
@@ -126,7 +116,7 @@ export function SearchError() {
                                     }
 
                                     {data.brand == 'Chevrolet' &&
-                                        <Chevrolet  width={60} />
+                                        <Chevrolet width={60} />
                                     }
 
                                     {data.brand == 'Fiat' &&
@@ -176,7 +166,7 @@ export function SearchError() {
                                         {data.model}
                                     </DataModel>
                                 </Model>
-                                <Hr/>
+                                <Hr />
                                 <Found>
                                     <TitleFound>
                                         ERRO ENCONTRADO:
@@ -185,7 +175,7 @@ export function SearchError() {
                                         {data.found}
                                     </DataFound>
                                 </Found>
-                                <Hr/>
+                                <Hr />
                                 <Solution>
                                     <TitleSolution>
                                         SOLUÇÃO DO PROBLEMA:
@@ -194,8 +184,27 @@ export function SearchError() {
                                         {data.solution}
                                     </DataSolution>
                                 </Solution>
-                                <Delete onPress={deleteError} >
-                                    <FontAwesomeIcon icon={ faTrash } size={25} color={ '#ffffff' } />
+                                <Delete>
+                                    <DeleteArea onPress={() => {
+                                        deleteError(data.id)
+                                    }}>
+                                        <FontAwesomeIcon icon={faTrash} size={23} color={'#ffffff'} />
+                                    </DeleteArea>
+                                    <EditArea
+                                        onPress={
+                                            () => navigation.navigate('EditError',
+                                                {
+                                                    id: data.id,
+                                                    brand: data.brand,
+                                                    code: data.code,
+                                                    found: data.found,
+                                                    model: data.model,
+                                                    solution: data.solution,
+                                                })
+                                        }
+                                    >
+                                        <FontAwesomeIcon icon={faPenToSquare} size={23} color={'#ffffff'} />
+                                    </EditArea>
                                 </Delete>
                             </ContentCard>
                         </Card>
@@ -204,4 +213,8 @@ export function SearchError() {
             </Main>
         </Container>
     );
-}   
+}
+
+
+
+

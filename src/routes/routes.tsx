@@ -11,10 +11,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faHomeUser } from '@fortawesome/sharp-solid-svg-icons/faHomeUser'
 import { faUserCircle } from '@fortawesome/sharp-solid-svg-icons/faUserCircle'
 
+
+
 export default function TabRoutes() {
 
   return (
-    <Navigator initialRouteName="Login"
+
+    
+
+    <Navigator initialRouteName="Welcome"
       screenOptions={{
         tabBarActiveTintColor: '#FF4B26',
         tabBarInactiveTintColor: '#FFFFFF',
