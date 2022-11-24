@@ -65,10 +65,8 @@ export function Register({navigation})  {
                     secureTextEntry={true}
                     onChangeText={setPassword}
                 />    
-                <LoginMail>
-                    <LoginMailText
-                        onPress={handleNewAccount}
-                    >
+                <LoginMail onPress={handleNewAccount}>
+                    <LoginMailText>
                         CADASTRAR-ME
                     </LoginMailText>
                 </LoginMail>

@@ -70,14 +70,14 @@ export function Perfil({navigation}) {
             </Main>
             <Footer>
                 <ViewButtonDesconnect>
-                    <ButtonDesconnect>
+                    <ButtonDesconnect onPress={() => {logout()}} >
                         <ViewIconDesconnect>
                         <FontAwesomeIcon icon={ faRightFromBracket } size={32} color={'#FFAC4A'}   />
                         </ViewIconDesconnect>
                         <ViewTextDesconnect>
-                            <TextButtonDesconnect
-                                onPress={() => {logout()}}
-                            >DESCONECTAR</TextButtonDesconnect>
+                            <TextButtonDesconnect>
+                                DESCONECTAR
+                            </TextButtonDesconnect>
                         </ViewTextDesconnect>
                     </ButtonDesconnect>
                 </ViewButtonDesconnect>

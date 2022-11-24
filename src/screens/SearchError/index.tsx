@@ -26,12 +26,19 @@ import {
     Hr,
     Delete,
     DeleteArea,
-    EditArea
+    EditArea,
+    ContentHeader,
+    TitleHeader,
+    SubtitleHeader,
+    HeaderSection,
+    LogoutHeader,
+    LogoutBackground
 } from './styles';
 import Header from '../../components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faFilterList } from '@fortawesome/sharp-solid-svg-icons/faFilterList'
+
+import { faArrowRightFromBracket } from '@fortawesome/sharp-solid-svg-icons/faArrowRightFromBracket'
 import { faTrash } from '@fortawesome/sharp-solid-svg-icons/faTrash'
 import { faPenToSquare } from '@fortawesome/sharp-solid-svg-icons/faPenToSquare'
 
@@ -83,9 +90,8 @@ export function SearchError({navigation}) {
         return () => subscribe();
     }, []);
 
-
     function deleteError(id) {
-        firestore()
+            firestore()
             .collection('errors')
             .doc(id)
             .delete()
@@ -96,8 +102,21 @@ export function SearchError({navigation}) {
 
     return (
         <Container>
-            <Header navigation={undefined} />
+            <HeaderSection>
+                <ContentHeader>
+                    <TitleHeader>CodeMyCar</TitleHeader>
+                    <SubtitleHeader>conta conosco, estamos aqui para ajudar</SubtitleHeader>
+                </ContentHeader>
+                <LogoutHeader>
+                    <LogoutBackground onPress={() => navigation.navigate("Perfil")} >
+                        <FontAwesomeIcon icon={ faArrowRightFromBracket } size={30} color={'white'} />
+                    </LogoutBackground>
+                </LogoutHeader>
+            </HeaderSection>
             <Main>
+         
+
+
                 <CardList>
                     {orders.map((data: any) => (
                         <Card key={data.id} >

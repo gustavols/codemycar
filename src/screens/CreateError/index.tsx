@@ -7,7 +7,13 @@ import { Container,
          ViewForm,
          AreaForm,
          Label,
-         TitlePage
+         TitlePage,
+         ContentHeader,
+         TitleHeader,
+         SubtitleHeader,
+         HeaderSection,
+         LogoutHeader,
+         LogoutBackground
 } from './styles';
 import Header from '../../components/Header';
 
@@ -15,6 +21,9 @@ import firestore from '@react-native-firebase/firestore';
 import { Alert } from "react-native";
 
 import RNPickerSelect from 'react-native-picker-select';
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faArrowRightFromBracket } from '@fortawesome/sharp-solid-svg-icons/faArrowRightFromBracket'
 
 export function CreateError({navigation}) {    
     const [brand, setBrand] = useState('');
@@ -34,13 +43,23 @@ export function CreateError({navigation}) {
             model,
             solution
         })
-        .then(() => Alert.alert("Erro", "Erro cadastrado com sucesso!", navigation.navigate("Home")))
+        .then(() => Alert.alert("Erro cadastrado com sucesso!", navigation.navigate("Home")))
         .catch((error) => console.log(error))
     }
 
     return (
             <Container>
-                <Header navigation={undefined} />
+                <HeaderSection>
+                <ContentHeader>
+                    <TitleHeader>CodeMyCar</TitleHeader>
+                    <SubtitleHeader>conta conosco, estamos aqui para ajudar</SubtitleHeader>
+                </ContentHeader>
+                <LogoutHeader>
+                    <LogoutBackground onPress={() => navigation.navigate("Perfil")} >
+                        <FontAwesomeIcon icon={ faArrowRightFromBracket } size={30} color={'white'} />
+                    </LogoutBackground>
+                </LogoutHeader>
+                </HeaderSection>
                 <TitlePage>
                     CADASTRE UM CÓDIGO
                 </TitlePage>

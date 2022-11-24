@@ -75,10 +75,8 @@ export function Login({navigation}) {
                     /> 
 
                     <SectionButtonLogin>
-                        <LoginMail>
-                            <LoginMailText
-                            onPress={handleSignIn}
-                            >
+                        <LoginMail onPress={handleSignIn}>
+                            <LoginMailText>
                                 ENTRAR
                             </LoginMailText>
                         </LoginMail>
